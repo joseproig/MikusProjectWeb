@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react';
-import BoxAnimation from './../../components/boxanimation';
 import ModelAnimation from './../../components/modelanimation';
 import { OrbitControls} from "@react-three/drei";
 import './styles.css'

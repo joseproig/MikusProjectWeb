@@ -7,11 +7,4 @@
     top: var(--position);
     right: 0;
     left: 1%;
-
-    background: #fff;
-    color: red;
-    border: 2px solid red;
-    border-radius: 3px;
-    padding: 5px 10px;
-    text-transform: uppercase;
 }

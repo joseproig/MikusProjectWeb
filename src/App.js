@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <NavBaro nameOfNavBar="Mikus Interactive" imageLink="https://cdn-icons-png.flaticon.com/512/124/124575.png"/>
       <CanvasThree></CanvasThree>
-      <MenuButton positionInVertical='25%'><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
-      <MenuButton positionInVertical='50%'><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
+      <MenuButton positionInVertical='25%' color = "white" backgroundColor="#204380"><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
+      <MenuButton positionInVertical='50%' color = "white" backgroundColor="#204380"><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
     </div>
   );
 }

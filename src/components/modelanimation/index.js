@@ -1,8 +1,6 @@
-import { useGLTF, useAnimations} from "@react-three/drei";
-import  { Suspense, useEffect, useRef } from "react";
-import scenePersonaje from "./../../assets/3DModels/jabon_2_animated_con.glb"
+import { useGLTF} from "@react-three/drei";
+import  {useEffect, useRef } from "react";
 import sceneEat from "./../../assets/3DModels/eat_con.glb"
-import Loader from "./../loader"
 
 
 function ModelAnimation(props) {
@@ -11,8 +9,9 @@ function ModelAnimation(props) {
     // This reference gives us direct access to the Mesh object (A Mesh is a basic scene object in three.js, and it's used to hold the geometry and the material needed to represent a shape in 3D space.)
     const group = useRef();
 
-    const { nodes, materials, animations } = useGLTF(sceneEat);
-    const { actions } = useAnimations(animations, group);
+    const { nodes } = useGLTF(sceneEat);
+    //const { nodes, materials, animations } = useGLTF(sceneEat);
+    //const { actions } = useAnimations(animations, group);
     //We indicate to React that the component wants to do something after renderize!
     useEffect(()=>{
         //actions.animationSphere.play();
