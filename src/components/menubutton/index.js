@@ -1,5 +1,5 @@
 import {Button} from 'react-bootstrap'
-
+import './styles.css'
 
 
 function MenuButton (props) {
@@ -9,6 +9,7 @@ function MenuButton (props) {
     cssProperties['background-color'] = backgroundColor;
     cssProperties['color'] = color;
     cssProperties['border-radius'] = "20px";
+    cssProperties['border-color'] = "white";
 
     return (
         <Button variant="default" className="botonAbsoluto" style={cssProperties} >{children}</Button>

@@ -40,3 +40,8 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url("./assets/images/backgroundStars_2.webp");
+  background-size:cover;
+}
