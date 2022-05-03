@@ -2,17 +2,21 @@ import './styles.css';
 import {Navbar, Container} from 'react-bootstrap'
 import Imagen from './../imagen';
 
+
 function NavBaro (props) {
     const {nameOfNavBar, imageLink} = props;
+
+   
+
     return (
         <Navbar variant="dark" className="navbarTransparent">
             <Container className="justify-content-center">
             <Navbar.Brand href="#home">
-                <Imagen width="30" height="30" imageLink={imageLink}></Imagen>
+                <Imagen width="30" height="30" imageLink={imageLink} classes="d-inline-block align-top"></Imagen>
                 {'   '}
             {nameOfNavBar}
             {'   '}
-            <Imagen width="30" height="30" imageLink={imageLink}></Imagen>
+            <Imagen width="30" height="30" imageLink={imageLink} classes="d-inline-block align-top"></Imagen>
             </Navbar.Brand>
             </Container>
             

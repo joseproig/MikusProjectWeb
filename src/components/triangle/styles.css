@@ -1,0 +1,70 @@
+:root {
+    --position: 25%;
+}
+
+.add-triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 420px solid #555;
+    position: relative;
+}
+
+.dive {
+    position:absolute;
+    top:31%;
+    left:-25%;
+    opacity:0;
+}
+
+.animarDive {
+    animation: diveAni 2s forwards;
+}
+
+@keyframes diveAni {
+    0% {
+        transform: translateX(-10px);
+        opacity:0;
+    }
+    60% {
+        transform: translateX(460px);
+        opacity:0;
+    }
+    75% {
+        transform: translateX(460px);
+        opacity:0.6;
+    }
+    85% {
+        transform: translateX(460px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(460px);
+        opacity:1;
+    }
+}
+
+
+.animarTriangle {
+    animation: triangleAni 2s forwards;
+}
+
+@keyframes triangleAni {
+    0% {
+        opacity:0;
+    }
+    60% {
+        opacity:0;
+    }
+    75% {
+        opacity:0.35;
+    }
+    85% {
+        opacity:0.10;
+    }
+    100% {
+        opacity:0.35;
+    }
+}
+

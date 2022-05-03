@@ -1,13 +1,18 @@
+import './styles.css';
+
 function Imagen (props) {
-    const {width,height, imageLink} = props;
+    const {width,height, imageLink,classes} = props;
+
+
+
     return (
         <img
             alt=""
             src={imageLink}
             width={width}
             height={height}
-            className="d-inline-block align-top"
-            />     
+            className={classes}
+            /> 
     );
   }
   

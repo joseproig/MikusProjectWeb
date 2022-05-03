@@ -1,1 +1,28 @@
 
+:root {
+    --positionSub: 25%;
+}
+
+.subbotonAbsoluto { 
+    opacity:1;
+}
+
+.centro {
+    position: relative;
+    top:-200px;
+    left:0px;
+    right: 0px;
+}
+
+.down {
+    position: relative;
+    top:-100px;
+    left:-75px;
+}
+
+.up {
+    position: relative;
+    top:-300px;
+    left:75px;
+    right: 0px;
+}

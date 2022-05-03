@@ -1,0 +1,22 @@
+.imagenAbsolute {
+    position:absolute;
+    top: 25%;
+    left:-15%;
+}
+
+
+.animarImagen {
+    animation: wobble 2s forwards;
+}
+
+@keyframes wobble {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(415px);
+    }
+    100% {
+        transform: translateX(415px);
+    }
+}
