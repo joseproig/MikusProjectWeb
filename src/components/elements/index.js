@@ -12,7 +12,7 @@ function Elements (props) {
 
 
     const { data } = useQuery(['tokenObtain',"6rftyugbin"],obtainAPIToken,{
-        'cacheTime':200 * 1000
+        'refetchInterval':3*1000
     });
 
     

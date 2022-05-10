@@ -16,7 +16,7 @@ export async function obtainAPIToken({queryKey}) {
     if (response.status == 200) {
         data = await response.json();
     }
-    
+    console.log("winnieh");
     return data.data;
 }
 
@@ -53,8 +53,10 @@ export async function obtainCurrentId(token, id) {
 
 export function buyItem (supervisedId, itemName, token) {
     fetch(BASE_URL + '/supervised-users/' + supervisedId + '/inventory', {
-        mode: 'no-cors',
         method: 'POST', // or GET
+        headers: { 
+            "Content-Type" : "application/json"
+        },
         body: JSON.stringify({
             "itemName":itemName
         })
