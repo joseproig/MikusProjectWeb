@@ -9,6 +9,8 @@ import {useQuery } from 'react-query';
 import { obtainAPIToken } from "../logic/rest-api-communication";
 
 function Elements (props) {
+
+
     const { data } = useQuery(['tokenObtain',"6rftyugbin"],obtainAPIToken,{
         'cacheTime':200 * 1000
     });
@@ -16,22 +18,25 @@ function Elements (props) {
     
     let points = null;
     let characterName = null;
+    let action = "Sleep";
+    let userId = 1;
+    let token = 2;
     if (data != undefined) {
         points = data.user.currentPoints;
         characterName = data.user.name;
+        action = data.user.currentAction;
+        userId = data.user.id;
+        token = data.access_token.token;
     }
 
    
-    let action = "Sleep";
-    if (data != undefined) {
-        console.log(data.user.currentAction);
-        action = data.user.currentAction;
-    }
+   
+    
     return (
-        <div style={{
-            width: '100%',
-            height: '100%'
-        }}>
+            <div style={{
+                width: '100%',
+                height: '100%'
+            }}>
             <StarfieldAnimation
             style={{
                 position: 'absolute',
@@ -41,8 +46,8 @@ function Elements (props) {
             />
             <NavBaro nameOfNavBar="Mikus Interactive" imageLink="https://cdn-icons-png.flaticon.com/512/124/124575.png"/>
             <CanvasThree currentAction={action} ></CanvasThree>
-            <MenuButton positionInVertical='40%' color = "white" backgroundColor="#175ea6"><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
-            <MenuButton positionInVertical='50%' color = "white" backgroundColor="#175ea6"><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
+            <MenuButton positionInVertical='40%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
+            <MenuButton positionInVertical='50%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
             <InfoCharacter name={characterName} points={points}></InfoCharacter>
         </div>
     );

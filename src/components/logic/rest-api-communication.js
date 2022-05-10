@@ -50,3 +50,15 @@ export async function obtainCurrentId(token, id) {
     }
     return data;
 }
+
+export function buyItem (supervisedId, itemName, token) {
+    fetch(BASE_URL + '/supervised-users/' + supervisedId + '/inventory', {
+        mode: 'no-cors',
+        method: 'POST', // or GET
+        body: JSON.stringify({
+            "itemName":itemName
+        })
+      }).then(res => res.json()) // if response is json, for text use res.text()
+      .then(response => console.log('Response:', JSON.stringify(response))) // if text, no need for JSON.stringify
+      .catch(error => console.error('Error:', error));
+}

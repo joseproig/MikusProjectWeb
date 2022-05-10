@@ -5,8 +5,9 @@ import  {useState } from "react";
 import AnimatedImage from '../animatedimage';
 
 
+
 function MenuButton (props) {
-    const {positionInVertical,color, backgroundColor, children} = props;
+    const {positionInVertical,color, backgroundColor, children, userId, token} = props;
 
     const [isAnimated, setAnimation] = useState(false);
 
@@ -18,12 +19,16 @@ function MenuButton (props) {
     cssProperties['border-color'] = "white";
     
     
-    const functionOnClick = () => setAnimation((isAnimated) => !isAnimated)
+    const functionOnClick = () => setAnimation(
+        
+        (isAnimated) => !isAnimated
+    
+    )
 
     return (
         <div>
             <Button variant="default" className="botonAbsoluto" onClick={functionOnClick} style={cssProperties} >{children}</Button>
-            <AnimatedImage width="200" height="200" imageLink={"https://cdn-icons-png.flaticon.com/512/190/190276.png"} classes="d-inline-block align-top imagenAbsolute" animate={isAnimated}></AnimatedImage>
+            <AnimatedImage width="200" height="200" imageLink={"https://cdn-icons-png.flaticon.com/512/190/190276.png"} classes="d-inline-block align-top imagenAbsolute" animate={isAnimated} userId={userId} token={token}></AnimatedImage>
         </div>
     );
 }
