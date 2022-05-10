@@ -1,15 +1,12 @@
 import { Canvas } from '@react-three/fiber'
-import React,{ Suspense, useEffect, useState} from 'react';
+import React,{ Suspense} from 'react';
 import ModelAnimationEat from './../../components/modelanimationeat';
 import ModelAnimation from './../../components/modelanimation';
 import ModelAnimationShower from './../../components/modelanimationshower';
 import { OrbitControls} from "@react-three/drei";
 import './styles.css';
 import Loader from "./../../components/loader";
-import firebase from "firebase";
 
- 
-let app = firebase;
  
 
 
