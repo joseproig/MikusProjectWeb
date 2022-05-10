@@ -21,7 +21,7 @@ function Elements (props) {
     let action = "Sleep";
     let userId = 1;
     let token = 2;
-    if (data != undefined) {
+    if (data !== undefined) {
         points = data.user.currentPoints;
         characterName = data.user.name;
         action = data.user.currentAction;

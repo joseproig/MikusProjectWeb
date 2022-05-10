@@ -2,7 +2,7 @@ const BASE_URL = 'https://quantum-tech.duckdns.org/api/v1'
 
 
 export async function obtainAPIToken({queryKey}) {
-    const [_, id] = queryKey;
+    const [id] = queryKey;
    
     let response = await fetch(BASE_URL + '/auth/login-base',{
         headers: { "Content-Type": "application/json" },
@@ -13,7 +13,7 @@ export async function obtainAPIToken({queryKey}) {
    
 
     let data = null;
-    if (response.status == 200) {
+    if (response.status === 200) {
         data = await response.json();
     }
     console.log("winnieh");
@@ -29,7 +29,7 @@ export async function obtainUserInfo(token, id) {
         method: "GET"
     });
     let data = null;
-    if (response.status == 200) {
+    if (response.status === 200) {
         data = await response.json();
     }
     return data;
@@ -45,7 +45,7 @@ export async function obtainCurrentId(token, id) {
         method: "GET"
     });
     let data = null;
-    if (response.status == 200) {
+    if (response.status === 200) {
         data = await response.json();
     }
     return data;
