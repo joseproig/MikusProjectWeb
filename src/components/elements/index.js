@@ -11,7 +11,7 @@ import { obtainAPIToken } from "../logic/rest-api-communication";
 function Elements (props) {
 
 
-    const { data } = useQuery(['tokenObtain',"6rftyugbin"],obtainAPIToken,{
+    const { data } = useQuery(["334af396"],obtainAPIToken,{
         'refetchInterval':3*1000
     });
 

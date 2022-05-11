@@ -1,9 +1,5 @@
 import './styles.css';
-import SubMenuButton from '../submenubutton'
-import { IoShirtSharp} from "react-icons/io5";
-import {GiSunglasses } from "react-icons/gi"
-import {useQuery } from 'react-query';
-import { obtainAPIToken } from "../logic/rest-api-communication";
+
 
 function InfoCharacter (props) {
     const {name, points} = props;

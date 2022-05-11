@@ -5,7 +5,7 @@ export async function obtainAPIToken({queryKey}) {
     const [id] = queryKey;
    
     let response = await fetch(BASE_URL + '/auth/login-base',{
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json"},
         body: JSON.stringify({"baseId":id}),
         method: "POST"
     });
