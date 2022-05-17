@@ -1,7 +1,7 @@
 .imagenAbsolute {
     position:absolute;
     top: 25%;
-    left:-15%;
+    left:-500px;
 }
 
 
@@ -11,12 +11,12 @@
 
 @keyframes wobble {
     0% {
-        transform: translateX(-10px);
+        transform: translateX(-500px);
     }
     50% {
-        transform: translateX(415px);
+        transform: translateX(515px);
     }
     100% {
-        transform: translateX(415px);
+        transform: translateX(515px);
     }
 }

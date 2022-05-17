@@ -13,8 +13,8 @@
 
 .dive {
     position:absolute;
-    top:31%;
-    left:-25%;
+    top:40%;
+    left:-515px;
     opacity:0;
 }
 
@@ -24,23 +24,23 @@
 
 @keyframes diveAni {
     0% {
-        transform: translateX(-10px);
+        transform: translateX(-500px);
         opacity:0;
     }
     60% {
-        transform: translateX(460px);
+        transform: translateX(430px);
         opacity:0;
     }
     75% {
-        transform: translateX(460px);
+        transform: translateX(430px);
         opacity:0.6;
     }
     85% {
-        transform: translateX(460px);
+        transform: translateX(430px);
         opacity:0;
     }
     100% {
-        transform: translateX(460px);
+        transform: translateX(430px);
         opacity:1;
     }
 }
