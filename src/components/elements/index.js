@@ -12,7 +12,7 @@ function Elements (props) {
 
 
     const { data } = useQuery(["334af396"],obtainAPIToken,{
-        'refetchInterval':3*1000
+        'refetchInterval':10*1000
     });
 
     
