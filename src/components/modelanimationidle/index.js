@@ -10,7 +10,7 @@ function ModelAnimationIdle(props) {
     // This reference gives us direct access to the Mesh object (A Mesh is a basic scene object in three.js, and it's used to hold the geometry and the material needed to represent a shape in 3D space.)
     const group = useRef();
 
-    const { nodes, materials,animations } = useGLTF(sceneIdle);
+    const { nodes, animations } = useGLTF(sceneIdle);
     //const { nodes, materials, animations } = useGLTF(sceneEat);
     //const { actions } = useAnimations(animations, group);
     //We indicate to React that the component wants to do something after renderize!
@@ -37,7 +37,7 @@ function ModelAnimationIdle(props) {
       
       return () => animations.forEach((clip) => mixer.uncacheClip(clip))
     }, []);
-    const { actions } = useAnimations(animations, group)
+    //const { actions } = useAnimations(animations, group)
     return (
       <group ref={group} {...props} dispose={null}>
         <group name="Scene">

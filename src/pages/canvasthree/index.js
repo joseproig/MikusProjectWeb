@@ -9,10 +9,6 @@ import './styles.css';
 import Loader from "./../../components/loader";
 
  
-
-
-
-
 function CanvasThree(props) {
     const {currentAction} = props;
     //const [action,setAction] = useState("Sleep");

@@ -1,4 +1,4 @@
-import { useGLTF, useAnimations} from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import  {useRef,useEffect, useState } from "react";
 import sceneEat from "./../../assets/3DModels/sleep3_con.glb"
 import { useFrame } from '@react-three/fiber'
@@ -37,7 +37,7 @@ function ModelAnimation(props) {
       
       return () => animations.forEach((clip) => mixer.uncacheClip(clip))
     }, []);
-    const { actions } = useAnimations(animations, group)
+    //const { actions } = useAnimations(animations, group)
     return (
       <group ref={group} {...props} dispose={null}>
       <group name="Scene">

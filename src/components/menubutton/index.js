@@ -1,6 +1,5 @@
 import {Button} from 'react-bootstrap'
 import './styles.css'
-import Imagen from './../imagen'
 import  {useState } from "react";
 import AnimatedImage from '../animatedimage';
 
