@@ -9,20 +9,20 @@
 
 .centro {
     position: relative;
-    top:-200px;
+    top:-250px;
     left:0px;
     right: 0px;
 }
 
 .down {
     position: relative;
-    top:-100px;
+    top:-175px;
     left:-75px;
 }
 
 .up {
     position: relative;
-    top:-300px;
+    top:-325px;
     left:75px;
     right: 0px;
 }

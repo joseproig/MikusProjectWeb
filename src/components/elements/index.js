@@ -46,8 +46,8 @@ function Elements (props) {
             />
             <NavBaro nameOfNavBar="Mikus Interactive" imageLink="https://cdn-icons-png.flaticon.com/512/124/124575.png"/>
             <CanvasThree currentAction={action} ></CanvasThree>
-            <MenuButton positionInVertical='40%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
-            <MenuButton positionInVertical='50%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
+            <MenuButton positionInVertical='38%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
+            <MenuButton positionInVertical='52%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><IoShirtSharp size="70"></IoShirtSharp></MenuButton>
             <InfoCharacter name={characterName} points={points}></InfoCharacter>
         </div>
     );
