@@ -29,7 +29,7 @@ function CanvasThree(props) {
                 {(action === "Eat" || action === "eat") && <ModelAnimationEat /> }
                 {(action === "Sleep" || action === "sleep") && <ModelAnimation /> }
                 {(action === "Shower" || action === "shower") && <ModelAnimationShower /> }
-                {(action === "Idle" || action === "idle") && <TestAnimation /> }
+                {(action === "Idle" || action === "idle") && <ModelAnimationIdle /> }
             </Suspense> 
         </Canvas>    
     );
