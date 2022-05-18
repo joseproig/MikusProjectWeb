@@ -4,6 +4,7 @@ import ModelAnimationEat from './../../components/modelanimationeat';
 import ModelAnimation from './../../components/modelanimation';
 import ModelAnimationShower from './../../components/modelanimationshower';
 import ModelAnimationIdle from './../../components/modelanimationidle';
+import TestAnimation from './../../components/testanimation';
 import { OrbitControls} from "@react-three/drei";
 import './styles.css';
 import Loader from "./../../components/loader";
@@ -28,7 +29,7 @@ function CanvasThree(props) {
                 {(action === "Eat" || action === "eat") && <ModelAnimationEat /> }
                 {(action === "Sleep" || action === "sleep") && <ModelAnimation /> }
                 {(action === "Shower" || action === "shower") && <ModelAnimationShower /> }
-                {(action === "Idle" || action === "idle") && <ModelAnimationIdle /> }
+                {(action === "Idle" || action === "idle") && <TestAnimation /> }
             </Suspense> 
         </Canvas>    
     );
