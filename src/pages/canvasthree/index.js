@@ -21,17 +21,12 @@ function CanvasThree(props) {
     }
 
     return (   
-        <Canvas>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <Suspense fallback={<Loader />}> 
-                <OrbitControls />
+      <Suspense fallback={<div>Loading... </div>}>
                 {(action === "Eat" || action === "eat") && <ModelAnimationEat /> }
                 {(action === "Sleep" || action === "sleep") && <ModelAnimation /> }
                 {(action === "Shower" || action === "shower") && <ModelAnimationShower /> }
                 {(action === "Idle" || action === "idle") && <ModelAnimationIdle /> }
-            </Suspense> 
-        </Canvas>    
+      </Suspense>      
     );
 }
   
