@@ -24,7 +24,10 @@ function Elements (props) {
     useEffect(() => {
         const audio = new Audio(song);
         audio.play();
-
+        audio.addEventListener('ended', function () {
+            this.currentTime = 0;
+            this.play();
+        }, false);
         return () => {
             // Either stop or pause audio streaming
         }
