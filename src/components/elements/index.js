@@ -7,7 +7,8 @@ import StarfieldAnimation from 'react-starfield-animation'
 import InfoCharacter from '../infocharacter';
 import {useQuery } from 'react-query';
 import { obtainAPIToken } from "../logic/rest-api-communication";
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
+import song from "./../../assets/audios/amikus.mp3";
 
 function Elements (props) {
 
@@ -16,7 +17,19 @@ function Elements (props) {
         'refetchInterval':10*1000
     });
 
+    const state = {
     
+    };
+
+    useEffect(() => {
+        const audio = new Audio(song);
+        audio.play();
+
+        return () => {
+            // Either stop or pause audio streaming
+        }
+    }, []);
+
     let points = null;
     let characterName = null;
     let action = "Sleep";
