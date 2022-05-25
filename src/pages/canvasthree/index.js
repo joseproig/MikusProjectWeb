@@ -1,13 +1,10 @@
-import { Canvas } from '@react-three/fiber'
 import React,{ Suspense} from 'react';
 import ModelAnimationEat from './../../components/modelanimationeat';
 import ModelAnimation from './../../components/modelanimation';
 import ModelAnimationShower from './../../components/modelanimationshower';
 import ModelAnimationIdle from './../../components/modelanimationidle';
-import TestAnimation from './../../components/testanimation';
-import { OrbitControls} from "@react-three/drei";
 import './styles.css';
-import Loader from "./../../components/loader";
+import ModelAnimationDead from './../../components/modelanimationdead';
 
  
 function CanvasThree(props) {
@@ -26,6 +23,7 @@ function CanvasThree(props) {
                 {(action === "Sleep" || action === "sleep") && <ModelAnimation /> }
                 {(action === "Shower" || action === "shower") && <ModelAnimationShower /> }
                 {(action === "Idle" || action === "idle") && <ModelAnimationIdle /> }
+                {(action === "Dead" || action === "dead") && <ModelAnimationDead /> }
       </Suspense>      
     );
 }
