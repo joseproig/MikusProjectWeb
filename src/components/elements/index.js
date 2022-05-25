@@ -7,6 +7,7 @@ import StarfieldAnimation from 'react-starfield-animation'
 import InfoCharacter from '../infocharacter';
 import {useQuery } from 'react-query';
 import { obtainAPIToken } from "../logic/rest-api-communication";
+import { useMemo } from 'react';
 
 function Elements (props) {
 
@@ -28,6 +29,17 @@ function Elements (props) {
         userId = data.user.id;
         token = data.access_token.token;
     }
+    const starAnimationElement = useMemo(()=> {
+        return (
+            <StarfieldAnimation
+            style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%'
+            }}
+            />
+        );
+    }, [])
 
    
    
@@ -37,13 +49,7 @@ function Elements (props) {
                 width: '100%',
                 height: '100%'
             }}>
-            <StarfieldAnimation
-            style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%'
-            }}
-            />
+           {starAnimationElement}
             <NavBaro nameOfNavBar="Mikus Interactive" imageLink="https://cdn-icons-png.flaticon.com/512/124/124575.png"/>
             <CanvasThree currentAction={action} ></CanvasThree>
             <MenuButton positionInVertical='38%' color = "white" backgroundColor="#175ea6" userId={userId} token={token}><BsFillBasketFill size="70"></BsFillBasketFill></MenuButton>
